@@ -8,18 +8,21 @@ import FavouritesList from "./components/FavouritesList";
 
 const App = () => {
   return (
-    <div className="container">
-      <header><MyNav /></header>
-      <main>
-        <BrowserRouter>
+    <BrowserRouter>
+      <div className="container">
+        <header>
+          <MyNav />
+        </header>
+        <main>
           <Routes>
             <Route path="/" element={<MainSearch />} />
             <Route path="/:company" element={<CompanySearchResults />} />
             <Route path="/favourites" element={<FavouritesList />} />
           </Routes>
-        </BrowserRouter></main>
-    </div>
+        </main>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
